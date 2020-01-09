@@ -1,6 +1,6 @@
 <?php
 
-namespace SendGrid\Test;
+namespace BrokeYourBike\Test;
 
 class FilesExistTest extends \PHPUnit_Framework_TestCase
 {
@@ -13,11 +13,10 @@ class FilesExistTest extends \PHPUnit_Framework_TestCase
         $this->assertFileExists("$rootDir/.travis.yml");
         $this->assertFileExists("$rootDir/.codeclimate.yml");
         $this->assertFileExists("$rootDir/CHANGELOG.md");
-        $this->assertFileExists("$rootDir/CODE_OF_CONDUCT.md");
         $this->assertFileExists("$rootDir/CONTRIBUTING.md");
         $this->assertFileExists("$rootDir/Dockerfile");
         $this->assertFileExists("$rootDir/.github/ISSUE_TEMPLATE");
-        $this->assertFileExists("$rootDir/LICENSE.txt");
+        $this->assertFileExists("$rootDir/LICENSE");
         $this->assertFileExists("$rootDir/.github/PULL_REQUEST_TEMPLATE");
         $this->assertFileExists("$rootDir/README.md");
         $this->assertFileExists("$rootDir/TROUBLESHOOTING.md");

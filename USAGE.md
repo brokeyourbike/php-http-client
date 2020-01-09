@@ -1,6 +1,6 @@
 # Usage
 
-Usage examples for SendGrid php-http-client
+Usage examples for BrokeYourBike php-http-client
 
 ## Initialization
 
@@ -13,7 +13,7 @@ include(dirname(__DIR__) . '/lib/Client.php');
 $path_to_config = dirname(__DIR__);
 $apiKey = getenv('SENDGRID_API_KEY');
 $headers = ['Authorization: Bearer ' . $apiKey];
-$client = new SendGrid\Client('https://api.sendgrid.com', $headers, '/v3');
+$client = new BrokeYourBike\Client('https://api.sendgrid.com', $headers, '/v3');
 ```
 
 ## Table of Contents

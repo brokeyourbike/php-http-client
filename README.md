@@ -1,17 +1,13 @@
-![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
-
-[![Travis Badge](https://travis-ci.org/sendgrid/php-http-client.svg?branch=master)](https://travis-ci.org/sendgrid/php-http-client)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sendgrid/php-http-client.svg?style=flat-square)](https://packagist.org/packages/sendgrid/php-http-client)
-[![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/php-http-client.svg)](https://github.com/sendgrid/php-http-client/graphs/contributors)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
+[![Travis Badge](https://travis-ci.org/brokeyourbike/php-http-client.svg?branch=master)](https://travis-ci.org/brokeyourbike/php-http-client)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/brokeyourbike/php-http-client.svg?style=flat-square)](https://packagist.org/packages/brokeyourbike/php-http-client)
+[![GitHub contributors](https://img.shields.io/github/contributors/brokeyourbike/php-http-client.svg)](https://github.com/brokeyourbike/php-http-client/graphs/contributors)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 **Quickly and easily access any RESTful or RESTful-like API.**
 
-If you are looking for the SendGrid API client library, please see [this repo](https://github.com/sendgrid/sendgrid-php).
-
 # Announcements
 
-All updates to this library is documented in our [CHANGELOG](https://github.com/sendgrid/php-http-client/blob/master/CHANGELOG.md).
+All updates to this library is documented in our [CHANGELOG](https://github.com/brokeyourbike/php-http-client/blob/master/CHANGELOG.md).
 
 # Table of Contents
 - [Installation](#installation)
@@ -19,8 +15,6 @@ All updates to this library is documented in our [CHANGELOG](https://github.com/
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [How to Contribute](#contribute)
-- [Thanks](#thanks)
-- [About](#about)
 - [License](#license)
 
 <a name="installation"></a>
@@ -37,7 +31,7 @@ Add php-http-client to your `composer.json` file. If you are not using [Composer
 ```json
 {
   "require": {
-    "sendgrid/php-http-client": "~3.10.0"
+    "brokeyourbike/php-http-client": "~3.10.0"
   }
 }
 ```
@@ -54,43 +48,6 @@ Then from the command line:
 composer install
 ```
 
-## Install without Composer
-
-You should create directory `lib` in directory of your application and clone to `lib` repositories [php-http-client](https://github.com/sendgrid/php-http-client.git) and [sendgrid-php](https://github.com/sendgrid/sendgrid-php.git):
-
-```
-$ cd /path/to/your/app
-$ mkdir lib
-$ cd lib
-$ git clone https://github.com/sendgrid/php-http-client.git
-```
-
-In the next step you should create `loader.php`:
-
-```
-$ cd /path/to/your/app
-$ touch loader.php
-```
-
-And add to `loader.php` code below:
-
-```php
-<?php
-
-require_once __DIR__ . '/lib/php-http-client/lib/Client.php';
-require_once __DIR__ . '/lib/php-http-client/lib/Response.php';
-```
-
-After it you can use `php-http-client` library in your project:
-
-```php
-<?php
-
-include __DIR__ . '/loader.php';
-
-$client = new SendGrid\Client();
-```
-
 <a name="quick-start"></a>
 # Quick Start
 
@@ -105,7 +62,7 @@ $apiKey = YOUR_SENDGRID_API_KEY;
 $authHeaders = [
     'Authorization: Bearer ' . $apiKey
 ];
-$client = new SendGrid\Client('https://api.sendgrid.com', $authHeaders);
+$client = new BrokeYourBike\Client('https://api.sendgrid.com', $authHeaders);
 $param = 'foo';
 $response = $client->your()->api()->_($param)->call()->get();
 
@@ -125,7 +82,7 @@ $apiKey = YOUR_SENDGRID_API_KEY;
 $authHeaders = [
     'Authorization: Bearer ' . $apiKey
 ];
-$client = new SendGrid\Client('https://api.sendgrid.com', $authHeaders);
+$client = new BrokeYourBike\Client('https://api.sendgrid.com', $authHeaders);
 $queryParams = [
     'hello' => 0, 'world' => 1
 ];
@@ -153,44 +110,29 @@ with message from CURL on why the request failed. Use the message as a hit to tr
 
 - [Usage Examples](USAGE.md)
 
-## Environment Variables
-
-You can do the following to create a .env file:
-
-```cp .env_example .env```
-
-Then, just add your API Key into your .env file.
-
 <a name="roadmap"></a>
 # Roadmap
 
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/php-http-client/milestones). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/brokeyourbike/php-http-client/milestones). We would love to hear your feedback.
 
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our libraries, please see our [CONTRIBUTING](https://github.com/sendgrid/php-http-client/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our libraries, please see our [CONTRIBUTING](https://github.com/brokeyourbike/php-http-client/blob/master/CONTRIBUTING.md) guide for details.
 
 Quick links:
 
-- [Feature Request](https://github.com/sendgrid/php-http-client/blob/master/CONTRIBUTING.md#feature-request)
-- [Bug Reports](https://github.com/sendgrid/php-http-client/blob/master/CONTRIBUTING.md#submit-a-bug-report)
-- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/php-http-client/blob/master/CONTRIBUTING.md#cla)
-- [Improvements to the Codebase](https://github.com/sendgrid/php-http-client/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
-- [Review Pull Requests](https://github.com/sendgrid/php-http-client/blob/master/CONTRIBUTING.md#code-reviews)
+- [Feature Request](https://github.com/brokeyourbike/php-http-client/blob/master/CONTRIBUTING.md#feature-request)
+- [Bug Reports](https://github.com/brokeyourbike/php-http-client/blob/master/CONTRIBUTING.md#submit-a-bug-report)
+- [Sign the CLA to Create a Pull Request](https://github.com/brokeyourbike/php-http-client/blob/master/CONTRIBUTING.md#cla)
+- [Improvements to the Codebase](https://github.com/brokeyourbike/php-http-client/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
+- [Review Pull Requests](https://github.com/brokeyourbike/php-http-client/blob/master/CONTRIBUTING.md#code-reviews)
 
 <a name="thanks"></a>
 # Thanks
 
 We were inspired by the work done on [birdy](https://github.com/inueni/birdy) and [universalclient](https://github.com/dgreisen/universalclient).
 
-<a name="about"></a>
-# About
-
-php-http-client is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
-
-php-http-client is maintained and funded by SendGrid, Inc. The names and logos for php-http-client are trademarks of SendGrid, Inc.
-
 <a name="license"></a>
 # License
-[The MIT License (MIT)](LICENSE.txt)
+[The MIT License (MIT)](LICENSE)

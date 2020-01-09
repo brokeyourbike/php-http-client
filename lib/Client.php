@@ -3,24 +3,25 @@
 /**
  * HTTP Client library
  *
+ * @author    Ivan Stasiuk <brokeyourbike@gmail.com>
  * @author    Matt Bernier <dx@sendgrid.com>
  * @author    Elmer Thomas <dx@sendgrid.com>
- * @copyright 2018 SendGrid
+ * @copyright 2018 SendGrid, 2020 Ivan Stasiuk
  * @license   https://opensource.org/licenses/MIT The MIT License
  * @version   GIT: <git_id>
- * @link      http://packagist.org/packages/sendgrid/php-http-client
+ * @link      http://packagist.org/packages/brokeyourbike/php-http-client
  */
 
-namespace SendGrid;
+namespace BrokeYourBike;
 
-use SendGrid\Exception\InvalidRequest;
+use BrokeYourBike\Exception\InvalidRequest;
 
 /**
  *
  * Class Client
- * @package SendGrid
- * @version 3.9.5
- * 
+ * @package BrokeYourBike
+ * @version 3.9.6
+ *
  * Quickly and easily access any REST or REST-like API.
  *
  * @method Response get($body = null, $query = null, $headers = null)

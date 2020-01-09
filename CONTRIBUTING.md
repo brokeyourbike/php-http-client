@@ -1,4 +1,4 @@
-Hello! Thank you for choosing to help contribute to one of the SendGrid open source projects. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
+Hello! Thank you for choosing to help contribute to one of the BrokeYourBike open source projects. There are many ways you can contribute and help is always welcome. We simply ask that you follow the following contribution policies.
 
 - [CLAs and CCLAs](#cla)
 - [Roadmap & Milestones](#roadmap)
@@ -12,16 +12,16 @@ Hello! Thank you for choosing to help contribute to one of the SendGrid open sou
 - [Code Reviews](#code-reviews)
 
 <a name="roadmap"></a>
-We use [Milestones](https://github.com/sendgrid/php-http-client/milestones) to help define current roadmaps, please feel free to grab an issue from the current milestone. Please indicate that you have begun work on it to avoid collisions. Once a PR is made, community review, comments, suggestions and additional PRs are welcomed and encouraged.
+We use [Milestones](https://github.com/brokeyourbike/php-http-client/milestones) to help define current roadmaps, please feel free to grab an issue from the current milestone. Please indicate that you have begun work on it to avoid collisions. Once a PR is made, community review, comments, suggestions and additional PRs are welcomed and encouraged.
 
 <a name="cla"></a>
 ## CLAs and CCLAs
 
-Before you get started, SendGrid requires that a SendGrid Contributor License Agreement (CLA) be filled out by every contributor to a SendGrid open source project.
+Before you get started, Ivas Stasiuk requires that a Ivas Stasiuk Contributor License Agreement (CLA) be filled out by every contributor to a Ivas Stasiuk open source project.
 
-Our goal with the CLA is to clarify the rights of our contributors and reduce other risks arising from inappropriate contributions.  The CLA also clarifies the rights SendGrid holds in each contribution and helps to avoid misunderstandings over what rights each contributor is required to grant to SendGrid when making a contribution.  In this way the CLA encourages broad participation by our open source community and helps us build strong open source projects, free from any individual contributor withholding or revoking rights to any contribution.
+Our goal with the CLA is to clarify the rights of our contributors and reduce other risks arising from inappropriate contributions. The CLA also clarifies the rights Ivas Stasiuk holds in each contribution and helps to avoid misunderstandings over what rights each contributor is required to grant to Ivas Stasiuk when making a contribution. In this way the CLA encourages broad participation by our open source community and helps us build strong open source projects, free from any individual contributor withholding or revoking rights to any contribution.
 
-SendGrid does not merge a pull request made against a SendGrid open source project until that pull request is associated with a signed CLA. Copies of the CLA are available [here](https://gist.github.com/SendGridDX/98b42c0a5d500058357b80278fde3be8#file-sendgrid_cla).
+Ivas Stasiuk does not merge a pull request made against a Ivas Stasiuk open source project until that pull request is associated with a signed CLA. Copies of the CLA are available [here](https://gist.github.com/brokeyourbike/375bca2696eca4ea7f7a00ac24236927#file-IVANSTASIUK_CLA).
 
 When you create a Pull Request, after a few seconds, a comment will appear with a link to the CLA. Click the link and fill out the brief form and then click the "I agree" button and you are all set. You will not be asked to re-sign the CLA unless we make a change.
 
@@ -52,7 +52,7 @@ Before you decide to create a new issue, please try the following:
 
 ### Please use our Bug Report Template
 
-In order to make the process easier, we've included a [sample bug report template](https://github.com/sendgrid/php-http-client/.github/ISSUE_TEMPLATE) (borrowed from [Ghost](https://github.com/TryGhost/Ghost/)). The template uses [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/) for formatting.
+In order to make the process easier, we've included a [sample bug report template](https://github.com/brokeyourbike/php-http-client/.github/ISSUE_TEMPLATE) (borrowed from [Ghost](https://github.com/brokeyourbike/php-http-client/.github/ISSUE_TEMPLATE)). The template uses [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/) for formatting.
 
 <a name="improvements-to-the-codebase"></a>
 ## Improvements to the Codebase
@@ -71,25 +71,13 @@ We welcome direct contributions to the php-http-client code base. Thank you!
 ##### Initial setup: #####
 
 ```bash
-git clone https://github.com/sendgrid/php-http-client.git
+git clone https://github.com/brokeyourbike/php-http-client.git
 cd php-http-client
-```
-
-### Environment Variables
-
-First, get your free SendGrid account [here](https://sendgrid.com/free?source=php-http-client).
-
-Next, update your environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys).
-
-```bash
-echo "export SENDGRID_API_KEY='YOUR_API_KEY'" > sendgrid.env
-echo "sendgrid.env" >> .gitignore
-source ./sendgrid.env
 ```
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/php-http-client/tree/master/examples).
+See the [examples folder](https://github.com/brokeyourbike/php-http-client/tree/master/examples).
 
 <a name="understanding-the-codebase"></a>
 ## Understanding the Code Base
@@ -102,26 +90,22 @@ Working examples that demonstrate usage.
 
 Unit tests.
 
-**/lib/SendGrid/Client.php**
+**/lib/BrokeYourBike/Client.php**
 
-An HTTP client with a fluent interface using method chaining and reflection. By returning self on [__call](https://github.com/sendgrid/php-http-client/blob/master/lib/client.php#L212) and [_()](https://github.com/sendgrid/php-http-client/blob/master/lib/client.pph#L198), we can dynamically build the URL using method chaining and [__call](https://github.com/sendgrid/php-http-client/blob/master/lib/client.php#L212) allows us to dynamically receive the method calls to achieve reflection.
+An HTTP client with a fluent interface using method chaining and reflection. By returning self on [__call](https://github.com/brokeyourbike/php-http-client/blob/master/lib/client.php#L212) and [_()](https://github.com/brokeyourbike/php-http-client/blob/master/lib/client.pph#L198), we can dynamically build the URL using method chaining and [__call](https://github.com/brokeyourbike/php-http-client/blob/master/lib/client.php#L212) allows us to dynamically receive the method calls to achieve reflection.
 
 This allows for the following mapping from a URL to a method chain:
 
-`/api_client/{api_key_id}/version` maps to `client->api_client().->_($api_key_id)->version-><method>()` where <method> is a [HTTP verb](https://github.com/sendgrid/php-http-client/blob/master/lib/client.php#L94).
-
-**/lib/SendGrid/Config.php**
-
-Loads the environment variables.
+`/api_client/{api_key_id}/version` maps to `client->api_client().->_($api_key_id)->version-><method>()` where <method> is a [HTTP verb](https://github.com/brokeyourbike/php-http-client/blob/master/lib/client.php#L94).
 
 <a name="testing"></a>
 ## Testing
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`/test/unit`](https://github.com/sendgrid/php-http-client/tree/master/test/unit) directory.
+All test files are in the [`/test/unit`](https://github.com/brokeyourbike/php-http-client/tree/master/test/unit) directory.
 
-For the purposes of contributing to this repo, please update the [`ClientTest.php`](https://github.com/sendgrid/php-http-client/blob/master/test/unit/ClientTest.php) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`ClientTest.php`](https://github.com/brokeyourbike/php-http-client/blob/master/test/unit/ClientTest.php) file with unit tests as you modify the code.
 
 ```bash
 composer install
@@ -148,11 +132,11 @@ Please run your code through:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/sendgrid/php-http-client
+   git clone https://github.com/brokeyourbike/php-http-client
    # Navigate to the newly cloned directory
    cd php-http-client
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/sendgrid/php-http-client
+   git remote add upstream https://github.com/brokeyourbike/php-http-client
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
@@ -198,4 +182,4 @@ Please run your code through:
 ## Code Reviews
 If you can, please look at open PRs and review them. Give feedback and help us merge these PRs much faster! If you don't know how, Github has some great [information on how to review a Pull Request](https://help.github.com/articles/about-pull-request-reviews/).
 
-If you have any additional questions, please feel free to [email](mailto:dx@sendgrid.com) us or create an issue in this repo.
+If you have any additional questions, please feel free to [email](mailto:brokeyourbike@gmail.com) us or create an issue in this repo.

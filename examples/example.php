@@ -9,7 +9,7 @@ include(dirname(__DIR__) . '/lib/Response.php');
 $path_to_config = dirname(__DIR__);
 $apiKey = getenv('SENDGRID_API_KEY');
 $headers = ['Authorization: Bearer ' . $apiKey];
-$client = new SendGrid\Client('https://api.sendgrid.com', $headers, '/v3');
+$client = new BrokeYourBike\Client('https://api.sendgrid.com', $headers, '/v3');
 
 // GET /v3/api_keys - retrieve all API Keys that belong to the user
 $queryParams = ['limit' => 100, 'offset' => 0];

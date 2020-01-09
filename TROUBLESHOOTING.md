@@ -1,4 +1,4 @@
-If you can't find a solution below, please open an [issue](https://github.com/sendgrid/php-http-client/issues).
+If you can't find a solution below, please open an [issue](https://github.com/brokeyourbike/php-http-client/issues).
 
 ## Table of Contents
 

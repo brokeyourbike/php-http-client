@@ -1,8 +1,8 @@
 <?php
 
-namespace SendGrid\Test;
+namespace BrokeYourBike\Test;
 
-use SendGrid\Client;
+use BrokeYourBike\Client;
 
 class MockClient extends Client
 {

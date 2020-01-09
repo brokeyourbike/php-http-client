@@ -3,23 +3,24 @@
 /**
  * HTTP Client library
  *
+ * @author    Ivan Stasiuk <brokeyourbike@gmail.com>
  * @author    Matt Bernier <dx@sendgrid.com>
  * @author    Elmer Thomas <dx@sendgrid.com>
- * @copyright 2018 SendGrid
+ * @copyright 2018 SendGrid, 2020 Ivan Stasiuk
  * @license   https://opensource.org/licenses/MIT The MIT License
  * @version   GIT: <git_id>
- * @link      http://packagist.org/packages/sendgrid/php-http-client
+ * @link      http://packagist.org/packages/brokeyourbike/php-http-client
  */
-namespace SendGrid\Exception;
+namespace BrokeYourBike\Exception;
 
 use Throwable;
 
 /**
  * Class InvalidHttpRequest
  *
- * Thrown when invalid payload was constructed, which could not reach SendGrid server.
+ * Thrown when invalid payload was constructed, which could not reach the server.
  *
- * @package SendGrid\Exceptions
+ * @package BrokeYourBike\Exceptions
  */
 class InvalidRequest extends \Exception
 {

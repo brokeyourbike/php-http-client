@@ -1,9 +1,9 @@
 <?php
 
-namespace SendGrid\Test;
+namespace BrokeYourBike\Test;
 
-use SendGrid\Client;
-use SendGrid\Exception\InvalidRequest;
+use BrokeYourBike\Client;
+use BrokeYourBike\Exception\InvalidRequest;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {

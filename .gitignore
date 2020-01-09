@@ -3,9 +3,17 @@ vendor/
 *.phar
 *.lock
 
-# Jetbrains Idea
+# Editor directories and files
 *.old
-.idea/
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+*.phpintel
+*.sublime-workspace
 
 # Environment files
 .env/*.*

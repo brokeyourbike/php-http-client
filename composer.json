@@ -1,12 +1,16 @@
 {
-    "name": "sendgrid/php-http-client",
+    "name": "brokeyourbike/php-http-client",
     "description": "HTTP REST client, simplified for PHP",
     "type": "library",
     "version": "3.10.0",
-    "homepage": "http://github.com/sendgrid/php-http-client",
-    "keywords": ["SendGrid", "HTTP", "REST", "API", "Fluent"],
+    "homepage": "http://github.com/brokeyourbike/php-http-client",
+    "keywords": ["BrokeYourBike", "HTTP", "REST", "API", "Fluent"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Ivan Stasiuk",
+            "email": "brokeyourbike@gmail.com"
+        },
         {
             "name": "Matt Bernier",
             "email": "dx@sendgrid.com"
@@ -25,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "SendGrid\\": "lib/"
+            "BrokeYourBike\\": "lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SendGrid\\Test\\": "test/unit/"
+            "BrokeYourBike\\Test\\": "test/unit/"
         }
     }
 }

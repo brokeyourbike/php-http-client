@@ -3,15 +3,16 @@
 /**
  * HTTP Client library
  *
+ * @author    Ivan Stasiuk <brokeyourbike@gmail.com>
  * @author    Matt Bernier <dx@sendgrid.com>
  * @author    Elmer Thomas <dx@sendgrid.com>
- * @copyright 2018 SendGrid
+ * @copyright 2018 SendGrid, 2020 Ivan Stasiuk
  * @license   https://opensource.org/licenses/MIT The MIT License
  * @version   GIT: <git_id>
- * @link      http://packagist.org/packages/sendgrid/php-http-client
+ * @link      http://packagist.org/packages/brokeyourbike/php-http-client
  */
 
-namespace SendGrid;
+namespace BrokeYourBike;
 
 /**
  * Holds the response from an API call.
@@ -79,10 +80,10 @@ class Response
         if (!$assoc) {
             return $this->headers;
         }
-        
+
         return $this->prettifyHeaders($this->headers);
     }
-    
+
     /**
       * Returns response headers as associative array
       *
