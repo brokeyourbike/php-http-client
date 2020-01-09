@@ -2,8 +2,6 @@
 
 [![Travis Badge](https://travis-ci.org/sendgrid/php-http-client.svg?branch=master)](https://travis-ci.org/sendgrid/php-http-client)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sendgrid/php-http-client.svg?style=flat-square)](https://packagist.org/packages/sendgrid/php-http-client)
-[![Email Notifications Badge](https://dx.sendgrid.com/badge/php)](https://dx.sendgrid.com/newsletter/php)
-[![Twitter Follow](https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow)](https://twitter.com/sendgrid)
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/php-http-client.svg)](https://github.com/sendgrid/php-http-client/graphs/contributors)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
@@ -148,14 +146,14 @@ var_dump(
 ```
 
 If there is an issues with the request, such as misconfigured CURL SSL options, an `InvalidRequest` will be thrown
-with message from CURL on why the request failed. Use the message as a hit to troubleshooting steps of your environment. 
+with message from CURL on why the request failed. Use the message as a hit to troubleshooting steps of your environment.
 
 <a name="usage"></a>
 # Usage
 
 - [Usage Examples](USAGE.md)
 
-## Environment Variables 
+## Environment Variables
 
 You can do the following to create a .env file:
 
