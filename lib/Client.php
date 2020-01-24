@@ -215,7 +215,7 @@ class Client
      *
      * @var array
      */
-    private $methods = ['get', 'post', 'patch', 'put', 'delete'];
+    protected $methods = ['get', 'post', 'patch', 'put', 'delete'];
 
     /**
       * Initialize the client
@@ -328,7 +328,7 @@ class Client
      *
      * @return string
      */
-    private function buildUrl($queryParams = null)
+    protected function buildUrl($queryParams = null)
     {
         $path = '/' . implode('/', $this->path);
         if (isset($queryParams)) {
@@ -339,7 +339,7 @@ class Client
 
     /**
      * Creates curl options for a request
-     * this function does not mutate any private variables
+     * this function does not mutate any protected variables
      *
      * @param string $method
      * @param array $body
@@ -347,7 +347,7 @@ class Client
      *
      * @return array
      */
-    private function createCurlOptions($method, $body = null, $headers = null)
+    protected function createCurlOptions($method, $body = null, $headers = null)
     {
         $options = [
                 CURLOPT_RETURNTRANSFER => true,
@@ -380,7 +380,7 @@ class Client
      *
      * @return array
      */
-    private function createSavedRequest(array $requestData, $retryOnLimit = false)
+    protected function createSavedRequest(array $requestData, $retryOnLimit = false)
     {
         return array_merge($requestData, ['retryOnLimit' => $retryOnLimit]);
     }
@@ -390,7 +390,7 @@ class Client
      *
      * @return array
      */
-    private function createCurlMultiHandle(array $requests)
+    protected function createCurlMultiHandle(array $requests)
     {
         $channels = [];
         $multiHandle = curl_multi_init();
@@ -413,7 +413,7 @@ class Client
      *
      * @return Response object
      */
-    private function parseResponse($channel, $content)
+    protected function parseResponse($channel, $content)
     {
         $headerSize = curl_getinfo($channel, CURLINFO_HEADER_SIZE);
         $statusCode = curl_getinfo($channel, CURLINFO_HTTP_CODE);
@@ -438,7 +438,7 @@ class Client
      *
      * @return Response response object
      */
-    private function retryRequest(array $responseHeaders, $method, $url, $body, $headers)
+    protected function retryRequest(array $responseHeaders, $method, $url, $body, $headers)
     {
         $sleepDurations = $responseHeaders['X-Ratelimit-Reset'] - time();
         sleep($sleepDurations > 0 ? $sleepDurations : 0);
